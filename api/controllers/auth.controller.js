@@ -27,6 +27,7 @@ export const signup = async (req, res, next) => {
 
   try {
     await newUser.save();
+    // It is used to send a JSON response to the client
     res.json('Signup successful');
   } catch (error) {
     next(error);
